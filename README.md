@@ -1,44 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Eligible frontend test
 
-## Available Scripts
+Welcome to the Eligible frontend "take-home" test. Below you will find instructions on how to go about completing this test, and hopefully an understanding of the sorts of things we're looking for.
 
-In the project directory, you can run:
+## Overview
+- You should return your completed test via email to `harry.vane@eligible.ai` as a git bundle (see [Git - Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling)). Please bundle the _FULL_ repo, rather than just the differences. There is no need to host the app!
+- Please branch off to do your work. You may use whatever methods / philosophy you like within your own branches, but a completed test should have a single branch that isn't `master` with all of the commits you wish to present on that branch. The number of commits is unimportant. Leave `master` untouched.
+- This test should be completed in no more than **3 hours**. The tasks (see below) can all be completed to some degree in this timeframe, but it is very important that you do not exceed this timeframe. We're not looking to see what you can produce in a week of hard graft, but how you think about and approach problems, and how you prioritise.
+- This has been deliberately set up to be a bare-bones application, feel free to change _anything_ in it. Add components, take them away, restructure the `src` folder, etc. are all fine. You may be questioned on the reasoning, of course!
+- Similarly, you are welcome to use hooks, functional components, whatever you feel like that you believe allows you to work most effectively.
+- Questions are encouraged! I don't need a warning for when you're going to be working on the test, but obviously if you can give me some warning I'm more likely to be available to answer any and all questions! Contact details should have been attached to the same email that you got this repo from.
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app was built using `create-react-app` with the `typescript` template. To run it, see the instructions in `CRA-README.md`. (spoiler: `yarn start`).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Tasks
+You have two main tasks. They can be done in any order / prioritised however you like.
 
-### `yarn test`
+1. **Style the app!** - There is effectively no styling on the app currently, and this first task is about changing that! Keep the time limit in mind, however. Spending two hours on a parallax effect would not be an effective use of time, for example. Keep user interactions in mind when styling. This is an app, not a painting.
+2. **Make the lists more usable** - Currently, the "posts" are just listed out in the way they arrive from the API. You may enhance the lists however you think is appropriate, but the kind of things we're looking for are below. Please note that we will _NOT_ mark you down for choosing one of these example options! Doing one of these really well will score much higher than doing something fanciful badly.
+    - Filtering by some attribute, for example the author
+    - Search by something in the title
+    - Search by something in the body
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As the time is limited, I cannot stress enough how much more we will value a well-executed "basic" implementation of styling and list enhancement over something off-piste and half-baked.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Resources
+- [Git - Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling)
+- [JSONPlaceholder API](https://jsonplaceholder.typicode.com/)
