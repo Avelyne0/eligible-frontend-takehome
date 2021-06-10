@@ -1,5 +1,6 @@
 import React from "react";
 import { SortOptions } from "./Posts";
+import { toTitleCase } from "../helpers";
 
 const PostsSort: React.FC<{
   changeSort: any;
@@ -7,10 +8,13 @@ const PostsSort: React.FC<{
 }> = ({ changeSort, sortOption }) => {
   return (
     <>
-      <select onChange={(e) => changeSort(e.target.value)}>
-        {Object.values(SortOptions).map((option: any) => (
+      <select
+        className="ui dropdown"
+        onChange={(e) => changeSort(e.target.value)}
+      >
+        {Object.keys(SortOptions).map((option: any) => (
           <option selected={sortOption === option} value={option}>
-            {option}
+            {toTitleCase(option)}
           </option>
         ))}
       </select>
