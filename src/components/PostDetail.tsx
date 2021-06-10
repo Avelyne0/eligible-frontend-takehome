@@ -42,20 +42,18 @@ export default class extends React.Component<Props, State> {
     }
 
     return (
-      <>
-        <Card>
-          <Card.Content>
-            <Card.Header>{post.title}</Card.Header>
-            <Card.Description>{post.body}</Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            <>
-              <Icon name="user" />
-              by: {post.userId}
-            </>
-          </Card.Content>
-        </Card>
-      </>
+      <Card>
+        <Card.Content>
+          <Card.Header>{post.title}</Card.Header>
+          <Card.Description>{post.body}</Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <>
+            <Icon name="user" />
+            by: {post.userId}
+          </>
+        </Card.Content>
+      </Card>
     );
   }
 }
