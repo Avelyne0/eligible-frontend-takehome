@@ -7,7 +7,10 @@ const PostsFilter: React.FC<{
 }> = ({ changeFilter, userIds, selectedUserId }) => {
   return (
     <>
-      <select onChange={(e) => changeFilter(+e.target.value)}>
+      <select
+        className="ui dropdown"
+        onChange={(e) => changeFilter(+e.target.value)}
+      >
         {userIds.map((userId: number) => (
           <option selected={selectedUserId === userId} value={userId}>
             {userId}
