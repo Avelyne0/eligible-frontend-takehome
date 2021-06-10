@@ -27,4 +27,4 @@ As the time is limited, I cannot stress enough how much more we will value a wel
 
 ## Resources
 - [Git - Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling)
-- [JSONPlaceholder API](https://jsonplaceholder.typicode.com/)
+- [JSONPlaceholder API](https://jsonplaceholder.typicode.com/)# eligible-frontend-takehome
