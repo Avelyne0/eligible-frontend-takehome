@@ -1,6 +1,13 @@
 import React from "react";
 import { RouteComponentProps } from "react-router";
-import { Card, Icon } from "semantic-ui-react";
+import { Card, Icon, Button } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+
+import styled from "styled-components";
+
+const CardContainer = styled.div`
+  padding: 4rem;
+`;
 
 type Post = {
   userId: number;
@@ -42,18 +49,25 @@ export default class extends React.Component<Props, State> {
     }
 
     return (
-      <Card>
-        <Card.Content>
-          <Card.Header>{post.title}</Card.Header>
-          <Card.Description>{post.body}</Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <>
-            <Icon name="user" />
-            by: {post.userId}
-          </>
-        </Card.Content>
-      </Card>
+      <CardContainer>
+        <Link to={`/`}>
+          <Button icon>
+            <Icon name="step backward" /> Return to posts
+          </Button>
+        </Link>
+        <Card>
+          <Card.Content>
+            <Card.Header>{post.title}</Card.Header>
+            <Card.Description>{post.body}</Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <>
+              <Icon name="user" />
+              by: {post.userId}
+            </>
+          </Card.Content>
+        </Card>
+      </CardContainer>
     );
   }
 }

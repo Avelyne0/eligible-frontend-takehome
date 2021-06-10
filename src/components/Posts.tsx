@@ -4,6 +4,19 @@ import styled from "styled-components";
 import PostsFilter from "./PostsFilter";
 import PostsSort from "./PostsSort";
 import SearchBar from "./SearchBar";
+import { Button } from "semantic-ui-react";
+
+const PostsContainer = styled.div`
+  margin: 4rem;
+`;
+const SearchBarContainer = styled.div`
+  margin: 2rem 0;
+`;
+
+const FilterContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 type Post = {
   userId: number;
@@ -106,41 +119,50 @@ export default class extends React.Component<Props, State> {
     const posts = this.sortPost(this.state.sortOption, searchedPosts);
 
     return (
-      <div>
+      <PostsContainer>
         <Title>Posts</Title>
         <div>
-          <PostsSort
-            changeSort={this.changeSort}
-            sortOption={this.state.sortOption}
-          />
-          <PostsFilter
-            changeFilter={this.changeFilter}
-            userIds={this.state.userIds}
-            selectedUserId={this.state.selectedUserId}
-          />
-          <button onClick={this.resetFilter} type="submit">
-            Reset Filter
-          </button>
-          <button onClick={this.resetAll} type="submit">
-            Reset All
-          </button>
+          <FilterContainer>
+            <div>
+              <PostsSort
+                changeSort={this.changeSort}
+                sortOption={this.state.sortOption}
+              />
+              <PostsFilter
+                changeFilter={this.changeFilter}
+                userIds={this.state.userIds}
+                selectedUserId={this.state.selectedUserId}
+              />
+            </div>
+            <Button.Group>
+              <Button primary onClick={this.resetFilter} type="submit">
+                Reset Filter
+              </Button>
+              <Button secondary onClick={this.resetAll} type="submit">
+                Reset All
+              </Button>
+            </Button.Group>
+          </FilterContainer>
           <br />
-          <div>
+          <SearchBarContainer>
             <br />
             <SearchBar
               searchTerm={this.state.searchTerm}
               updateSearchTerm={this.updateSearchTerm}
             />
-          </div>
+          </SearchBarContainer>
         </div>
         {posts.map((post) => (
-          <div key={post.id}>
-            <Link to={`posts/${post.id}`}>
-              <span>{post.title}</span>
-            </Link>
-          </div>
+          <>
+            <div key={post.id}>
+              <Link to={`posts/${post.id}`}>
+                <span>{post.title}</span>
+              </Link>
+            </div>
+            <br />
+          </>
         ))}
-      </div>
+      </PostsContainer>
     );
   }
 }
