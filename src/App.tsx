@@ -1,7 +1,7 @@
-import React from "react"
-import Posts from "./Posts"
-import { Redirect, Route, Switch } from "react-router"
-import PostDetail from "./PostDetail"
+import React from "react";
+import { Redirect, Route, Switch } from "react-router";
+import PostDetail from "./components/PostDetail";
+import Posts from "./components/Posts";
 
 export default () => (
   <div>
@@ -11,4 +11,4 @@ export default () => (
       <Redirect to="/" />
     </Switch>
   </div>
-)
+);
