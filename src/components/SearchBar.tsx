@@ -5,7 +5,7 @@ const SearchBar: React.FC<{
   updateSearchTerm: any;
 }> = ({ searchTerm, updateSearchTerm }) => {
   return (
-    <form action="/" method="get">
+    <div className="ui input focus">
       <input
         value={searchTerm}
         onInput={(e) => updateSearchTerm(e.currentTarget.value)}
@@ -14,8 +14,7 @@ const SearchBar: React.FC<{
         placeholder="Search posts"
         name="search"
       />
-      <button type="submit">Search</button>
-    </form>
+    </div>
   );
 };
 
